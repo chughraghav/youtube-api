@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.handleSubmit('cats')
+        this.handleSubmit('chill music live')
     }
 
     onVideoSelect = (video) => {
@@ -43,14 +43,15 @@ class App extends Component {
         return (
             <Grid justify="center" container spacing={10}>
                 <Grid item xs={12}>
-                    <Grid container spacing={10}>
+                    <Grid container spacing={10} >
                         <Grid item xs={12}>
                             <SearchBar onFormSubmit= {this.handleSubmit} />
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item md={8} xs={12} style={{marginBottom : '150px'}}>
                             <VideoDetail video = {selectedVideo }/>
                         </Grid>
-                        <Grid item xs={4} >
+                        <br/><br/><br/><br/><br/><br/>
+                        <Grid item md={4} xs={12}>
                             <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
                         </Grid>
                     </Grid>
